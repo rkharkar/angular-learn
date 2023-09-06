@@ -6,6 +6,7 @@ import { UserDemoModule } from './user-demo/user-demo.module';
 import { UserDemoInjectorComponent } from './user-demo/user-demo.injector.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserDemoComponent } from './user-demo/user-demo.component';
+import { AnalyticsDemoComponent } from './analytics-demo/analytics-demo.component';
 
 const route: Routes = [
   {path: '', component: UserDemoComponent, pathMatch: 'full'}
@@ -15,7 +16,8 @@ const route: Routes = [
   declarations: [
     AppComponent,
     UserDemoInjectorComponent,
-    UserDemoComponent
+    UserDemoComponent,
+    AnalyticsDemoComponent
   ],
   imports: [
     BrowserModule,
