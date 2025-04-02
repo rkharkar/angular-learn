@@ -11,8 +11,9 @@ import {
 } from '@angular/router';
 
 @Component({
-  selector: 'app-sidebar-item',
-  templateUrl: './sidebar-item.component.html'
+    selector: 'app-sidebar-item',
+    templateUrl: './sidebar-item.component.html',
+    standalone: false
 })
 export class SidebarItemComponent implements OnInit {
   @Input('item') item: ExampleDef;

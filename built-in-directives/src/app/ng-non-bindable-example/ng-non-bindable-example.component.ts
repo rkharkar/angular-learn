@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ng-non-bindable-example',
-  templateUrl: './ng-non-bindable-example.component.html'
+    selector: 'app-ng-non-bindable-example',
+    templateUrl: './ng-non-bindable-example.component.html',
+    standalone: false
 })
 export class NgNonBindableExampleComponent implements OnInit {
   content: string;

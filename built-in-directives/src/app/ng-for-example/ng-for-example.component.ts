@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ng-for-example',
-  templateUrl: './ng-for-example.component.html'
+    selector: 'app-ng-for-example',
+    templateUrl: './ng-for-example.component.html',
+    standalone: false
 })
 export class NgForExampleComponent implements OnInit {
   cities: string[];

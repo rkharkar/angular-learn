@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Product } from './product.model';
 
 @Component({
-  selector: 'inventory-app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    selector: 'inventory-app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: false
 })
 export class AppComponent {
   products: Product[];

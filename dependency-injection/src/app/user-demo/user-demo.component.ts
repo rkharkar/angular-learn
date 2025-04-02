@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
 
 @Component({
-  selector: 'app-user-demo',
-  templateUrl: './user-demo.component.html',
-  styleUrls: ['./user-demo.component.css']
+    selector: 'app-user-demo',
+    templateUrl: './user-demo.component.html',
+    styleUrls: ['./user-demo.component.css'],
+    standalone: false
 })
 export class UserDemoComponent {
   userName: string;
