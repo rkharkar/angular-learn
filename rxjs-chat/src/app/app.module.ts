@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 
 import { UsersService } from './user/users.service';
 import { ThreadsService } from './thread/threads.service';
@@ -16,26 +16,19 @@ import { ChatWindowComponent } from './chat-window/chat-window.component';
 import { ChatPageComponent } from './chat-page/chat-page.component';
 import { FromNowPipe } from './pipes/from-now.pipe';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    ChatMessageComponent,
-    ChatThreadComponent,
-    ChatNavBarComponent,
-    ChatThreadsComponent,
-    ChatWindowComponent,
-    ChatPageComponent,
-    FromNowPipe
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [
-    MessagesService, ThreadsService, UsersService
-  ],
-
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        ChatMessageComponent,
+        ChatThreadComponent,
+        ChatNavBarComponent,
+        ChatThreadsComponent,
+        ChatWindowComponent,
+        ChatPageComponent,
+        FromNowPipe
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule], providers: [
+        MessagesService, ThreadsService, UsersService,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }

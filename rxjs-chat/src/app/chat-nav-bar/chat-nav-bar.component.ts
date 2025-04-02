@@ -11,9 +11,10 @@ import { Message } from './../message/message.model';
 import { combineLatest } from 'rxjs';
 
 @Component({
-  selector: 'chat-nav-bar',
-  templateUrl: './chat-nav-bar.component.html',
-  styleUrls: ['./chat-nav-bar.component.css']
+    selector: 'chat-nav-bar',
+    templateUrl: './chat-nav-bar.component.html',
+    styleUrls: ['./chat-nav-bar.component.css'],
+    standalone: false
 })
 export class ChatNavBarComponent implements OnInit {
   unreadMessagesCount: number;

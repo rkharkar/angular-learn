@@ -7,9 +7,10 @@ import { ThreadsService } from './../thread/threads.service';
 import { Thread } from '../thread/thread.model';
 
 @Component({
-  selector: 'chat-thread',
-  templateUrl: './chat-thread.component.html',
-  styleUrls: ['./chat-thread.component.css']
+    selector: 'chat-thread',
+    templateUrl: './chat-thread.component.html',
+    styleUrls: ['./chat-thread.component.css'],
+    standalone: false
 })
 export class ChatThreadComponent implements OnInit {
   @Input() thread: Thread;

@@ -6,9 +6,10 @@ import { ThreadsService } from './thread/threads.service';
 import { MessagesService } from './message/messages.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    standalone: false
 })
 export class AppComponent {
     constructor(public messagesService: MessagesService,

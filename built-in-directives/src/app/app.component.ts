@@ -3,8 +3,9 @@ import { Router } from '@angular/router';
 import { ExampleDef } from './example.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    standalone: false
 })
 export class AppComponent {
   constructor(

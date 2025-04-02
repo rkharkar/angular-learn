@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ng-style-example',
-  templateUrl: './ng-style-example.component.html'
+    selector: 'app-ng-style-example',
+    templateUrl: './ng-style-example.component.html',
+    standalone: false
 })
 export class NgStyleExampleComponent implements OnInit {
   color: string;

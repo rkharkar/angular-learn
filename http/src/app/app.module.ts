@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { SimpleHttpComponent } from './simple-http/simple-http.component';
 import { MoreHttpRequestsComponent } from './more-http-requests/more-http-requests.component';
 import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
@@ -20,12 +20,10 @@ import { youTubeSearchInjectables } from './you-tube-search/you-tube-search.inje
     SearchResultComponent,
     SearchBoxComponent
   ],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule
   ],
-  providers: [youTubeSearchInjectables],
-  bootstrap: [AppComponent]
-})
+  providers: [youTubeSearchInjectables, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }

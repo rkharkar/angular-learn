@@ -14,10 +14,11 @@ import { Message } from '../message/message.model';
 import { MessagesService } from '../message/messages.service';
 
 @Component({
-  selector: 'chat-window',
-  templateUrl: './chat-window.component.html',
-  styleUrls: ['./chat-window.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'chat-window',
+    templateUrl: './chat-window.component.html',
+    styleUrls: ['./chat-window.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: false
 })
 export class ChatWindowComponent implements OnInit {
   messages: Observable<any>;

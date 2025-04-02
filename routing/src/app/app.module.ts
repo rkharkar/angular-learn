@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {
   RouterModule,
   Routes
@@ -56,12 +56,11 @@ const routes: Routes = [
     LoginComponent,
     ProtectedComponent,
   ],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
     RouterModule.forRoot(routes), // <-- routes
-
     // added this for our child module
     ProductsModule
   ],
@@ -69,8 +68,8 @@ const routes: Routes = [
     // uncomment this for "hash-bang" routing
     // { provide: LocationStrategy, useClass: HashLocationStrategy }
     AUTH_PROVIDERS,
-    LoggedInGuard
-  ],
-  bootstrap: [AppComponent]
+    LoggedInGuard,
+    provideHttpClient(withInterceptorsFromDi())
+  ]
 })
 export class AppModule { }

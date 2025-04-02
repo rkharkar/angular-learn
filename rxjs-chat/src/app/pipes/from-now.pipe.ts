@@ -6,7 +6,8 @@ import * as moment from 'moment';
  * such as "10 minutes ago".
  */
 @Pipe({
-  name: 'fromNow'
+    name: 'fromNow',
+    standalone: false
 })
 export class FromNowPipe implements PipeTransform {
   transform(value: any): string {

@@ -4,9 +4,10 @@ import { SpotifyService } from '../spotify.service';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-artist',
-  templateUrl: './artist.component.html',
-  styleUrls: ['./artist.component.css']
+    selector: 'app-artist',
+    templateUrl: './artist.component.html',
+    styleUrls: ['./artist.component.css'],
+    standalone: false
 })
 export class ArtistComponent implements OnInit {
   private id: string;

@@ -2,9 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-simple-http',
-  templateUrl: './simple-http.component.html',
-  styleUrls: ['./simple-http.component.css']
+    selector: 'app-simple-http',
+    templateUrl: './simple-http.component.html',
+    styleUrls: ['./simple-http.component.css'],
+    standalone: false
 })
 export class SimpleHttpComponent implements OnInit {
   public data: Object;

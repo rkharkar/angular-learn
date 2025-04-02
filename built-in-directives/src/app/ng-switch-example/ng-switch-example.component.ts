@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-ng-switch-example',
-  templateUrl: './ng-switch-example.component.html'
+    selector: 'app-ng-switch-example',
+    templateUrl: './ng-switch-example.component.html',
+    standalone: false
 })
 export class NgSwitchExampleComponent implements OnInit {
   choice: number;

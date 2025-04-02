@@ -2,9 +2,10 @@ import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-more-http-requests',
-  templateUrl: './more-http-requests.component.html',
-  styleUrls: ['./more-http-requests.component.css']
+    selector: 'app-more-http-requests',
+    templateUrl: './more-http-requests.component.html',
+    styleUrls: ['./more-http-requests.component.css'],
+    standalone: false
 })
 export class MoreHttpRequestsComponent implements OnInit {
   public loading: boolean;
@@ -31,6 +32,7 @@ export class MoreHttpRequestsComponent implements OnInit {
   }
 
   public makeDelete(): void {
+    this.loading = true;
     this.http.delete(
       'https://jsonplaceholder.typicode.com/posts/1'
     )
