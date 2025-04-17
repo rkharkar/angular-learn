@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed } from '@angular/core/testing';
 
 import { ChatMessageComponent } from './chat-message.component';
 
@@ -6,7 +6,7 @@ xdescribe('ChatMessageComponent', () => {
   let component: ChatMessageComponent;
   let fixture: ComponentFixture<ChatMessageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(fakeAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ChatMessageComponent ]
     })
