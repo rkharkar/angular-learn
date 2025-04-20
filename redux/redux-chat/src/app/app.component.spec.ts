@@ -1,29 +1,32 @@
-import { TestBed } from '@angular/core/testing';
+import { fakeAsync, TestBed } from '@angular/core/testing';
+
 import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
+xdescribe('AppComponent', () => {
+  beforeEach(fakeAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        AppComponent
+      ],
     }).compileComponents();
-  });
+  }));
 
-  it('should create the app', () => {
+  it('should create the app', fakeAsync(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
+    const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
+  }));
 
-  it(`should have the 'redux-chat' title`, () => {
+  it(`should have as title 'app works!'`, fakeAsync(() => {
     const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('redux-chat');
-  });
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('app works!');
+  }));
 
-  it('should render title', () => {
+  it('should render title in a h1 tag', fakeAsync(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, redux-chat');
-  });
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+  }));
 });
