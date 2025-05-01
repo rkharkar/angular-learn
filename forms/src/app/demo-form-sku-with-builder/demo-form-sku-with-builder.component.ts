@@ -42,8 +42,8 @@ export class DemoFormSkuWithBuilderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit(value: string): void {
-    console.log('You submitted value: ', value);
+  onSubmit(value: any): void {
+    console.log('You submitted value: ', value.sku);
   }
 
   getFormControl(controlName: string): FormControl {
