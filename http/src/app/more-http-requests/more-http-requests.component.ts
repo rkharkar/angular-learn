@@ -44,14 +44,14 @@ export class MoreHttpRequestsComponent implements OnInit {
 
   public makeHeaders(): void {
     const headers = new HttpHeaders({
-      'X_API_TOKEN': 'ng-book'
+      'X-API-TOKEN': 'ng-book'
     });
 
     const req = new HttpRequest(
       'GET',
       'https://jsonplaceholder.typicode.com/posts/1',
       {
-        headers
+        headers: headers
       }
     );
 

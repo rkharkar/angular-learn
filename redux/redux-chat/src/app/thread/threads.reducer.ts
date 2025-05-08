@@ -72,7 +72,7 @@ const threadsSlice = createSlice({
       const message = action.payload.message;
 
       const isRead = message.thread!.id === state.currentThreadId ?
-                      true : message.isRead;
+        true : message.isRead;
       const newMessage = Object.assign({}, message, {
         isRead: isRead,
         id: uuid()
@@ -97,7 +97,8 @@ const threadsSlice = createSlice({
       const oldThread = state.entities[thread.id];
 
       const newMessages = oldThread.messages.map(
-        (message) => Object.assign({}, message, { isRead: true }));
+        (message) => Object.assign({}, message, { isRead: true })
+      );
 
       const newThread = Object.assign({}, oldThread, {
         messages: newMessages

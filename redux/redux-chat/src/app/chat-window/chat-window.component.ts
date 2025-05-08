@@ -14,7 +14,6 @@ import {
   getCurrentThread,
   getCurrentUser
 } from '../app.reducer';
-import { uuid } from '../util/uuid';
 
 @Component({
   selector: 'chat-window',
